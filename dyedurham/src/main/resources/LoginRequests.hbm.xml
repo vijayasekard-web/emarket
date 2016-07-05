@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.onemove.model.LoginRequests" table="login_requests">
+<id name="id" type="int" column="ID" >
+<generator class="assigned"/>
+</id>
+<property name="ipAddress">
+<column name="ipaddress" default="null"/>
+</property>
+<property name="sourceIpAddress">
+<column name="source_ipaddress" default="null"/>
+</property>
+<property name="userName">
+<column name="username" default="null"/>
+</property>
+<property name="corporationId" type="int">
+<column name="corporation_id" default="null"/>
+</property>
+<property name="result" type="boolean">
+<column name="result" default="null"/>
+</property>
+<property name="failureCode" type="int">
+<column name="failure_code" default="null"/>
+</property>
+<property name="appCode" type="int">
+<column name="app_code" default="null"/>
+</property>
+</class>
+</hibernate-mapping>

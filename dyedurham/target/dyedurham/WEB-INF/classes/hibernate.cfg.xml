@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+<!--property name="hibernate.connection.url">jdbc:mysql://econ-van-tecpdb:3306/ecpportal_staging</property-->
+<property name="hibernate.connection.url">jdbc:mysql://devvijay2vm:3306/ecpportal_development</property>
+<property name="hibernate.connection.username">sa</property>
+<property name="hibernate.connection.password">woofer8</property>
+<property name="show_sql">true</property>
+<mapping resource="PortalUsers.hbm.xml"></mapping>
+<mapping resource="Corporations.hbm.xml"></mapping>
+<mapping resource="LoginRequests.hbm.xml"></mapping>
+<mapping resource="UserPasswords.hbm.xml"></mapping>
+</session-factory>
+</hibernate-configuration>
